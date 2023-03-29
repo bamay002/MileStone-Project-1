@@ -11,3 +11,16 @@
 * Display whether you or the computer won or if it was a tie
 
 **3. Handle player input:**
+* Add an event listener to the input field to listen for which button / option the player selects 
+* When an option is selected, add one point onto the score of whoever is the winner 
+* If it is a tie, score remains the same (no changes)
+* When option is selected have a message typed " blank won" or "tie"
+
+**4. Render the updated game state:**
+* Update the UI to display updated scores
+
+**5. Restart the game:**
+* Add a restart button to the game UI
+* When the restart button is clicked, resets the game score board and updates the UI
+
+## 1 DEFINE THE GAME DATA
