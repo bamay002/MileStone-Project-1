@@ -4,7 +4,7 @@ Repository with steps and guidance on how to create a simple game of Rock Paper 
 
 
 
-<!-- need to fix centering when working in a big screen
+need to fix centering when working in a big screen
  looks good when i work with my screen side by side so small but when i extend looks funcky
 
 fix coloring it is just random colors right now to check if work is going right
