@@ -1,5 +1,7 @@
 const selectionButtons = document.querySelectorAll('[data-selection]')
-
+const finalColumn = document.querySelector('[data-final-column]')
+const computerScoreSpan = document.querySelector('[data-computer-score]')
+const youScoreSpan = document.querySelector('[data-you-score]')
 const SELECTIONS = [
     {
         name: 'rock',
@@ -29,6 +31,36 @@ selectionButtons.forEach(selectionButton => {
 })
 
 function makeSelection(selection){
-    console.log(selection)
+    const computerSelection = randomSelection()
+    const youWinner = isWinner(selection, computerSelection)
+    const computerWinner = isWinner(computerSelection, selection)
+    console.log(computerSelection)
+    //console.log(selection)
+
+    addSelectionResult(computerSelection, computerWinner)
+    addSelectionResult(selection, youWinner)
+
+    if (youWinner) incrementScore(youScoreSpan)                 // THIS AND BELOW FIX SCORES 
+    if (computerWinner) incrementScore(computerScoreSpan)
 }                                               //everything above gets me to print out selection when inspect and look at console
 
+function randomSelection(){
+    const randomIndex = Math.floor(Math.random() * SELECTIONS.length)       //gives us a number between 0 - 2 (cause thats how many options we have (index 0 1 2))
+    return SELECTIONS[randomIndex]                                          //gives us random selection everytime we call function
+}
+
+function isWinner(selection, opponentSelection){
+    return selection.beats === opponentSelection.name                   //from SELECTIONS above
+}
+
+function addSelectionResult(selection, winner){
+    const div = document.createElement('div')
+    div.innerText = selection.buttonName
+    div.classList.add('resultSelection')
+    if (winner) div.classList.add('resultSelectionWinner')
+    finalColumn.after(div)
+}
+
+function incrementScore(scoreSpan){
+    scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1                 //FIX SCORE GIVES NAN INSTEAD OF NUM 20:51
+}
