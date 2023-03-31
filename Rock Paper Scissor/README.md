@@ -23,4 +23,4 @@
 * Add a restart button to the game UI
 * When the restart button is clicked, resets the game score board and updates the UI
 
-## 1 DEFINE THE GAME DATA
+## 1- DEFINE THE GAME DATA
