@@ -1,3 +1,50 @@
 body{
     background-color: pink;
 }
+
+.selections{
+    display: flex;
+    justify-content: center;
+}
+
+.selection{
+    cursor: pointer;        /* makes the cursor a hand when you are over it */
+    font-size: 2rem;
+    margin: 10px 20px;
+    /* transition: 200ms;/*
+}
+
+.selection:hover{
+    transform: scale(1.2);      /* when cursor goes over button - button grows just for illusion */
+}
+
+.result{
+    margin-top: 1rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.resultName{
+    font-size: 2rem;
+}
+
+.resultScore{
+    margin: 2px;
+    font-size: 1rem;
+    text-align: center;
+    color: #5a5959;
+}
+
+.resultSelection{
+    margin: 10px 0px;
+    opacity: .5;
+}
+
+.resultSelectionWinner{
+    margin: 10px 0px;
+    opacity: 1;
+    font-size: 1.5rem;
+}

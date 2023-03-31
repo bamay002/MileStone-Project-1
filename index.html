@@ -5,10 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css"/>
-    <link rel="stylesheet" href="./script.js"/>
+    <script src="script.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    
+    <div class="selections">
+        <button class="selection" data-selection="rock">ROCK</button>
+        <button class="selection" data-selection="paper">PAPER</button>         <!-- let us know what button we are picking fo java -->
+        <button class="selection" data-selection="scissor">SCISSOR</button>
+    </div>
+
+    <div class="result">
+        <div class="resultName">
+            You
+            <div class="resultScore">Score:0</div> 
+        </div>
+        <div class="resultName">
+            Computer
+            <div class="resultScore"> Score: 0</div> 
+        </div>
+
+        <!-- <div class="resultSelectionWinner">rock</div>
+        <div class="resultSelection">scissor</div> -->
+
+    </div>
 </body>
 </html>
