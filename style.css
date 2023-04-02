@@ -1,10 +1,11 @@
 
 
 body{
-    background-color: pink;
+    color: pink;
+    font-family: changa one;
 }
 
-.selections{
+.selections, .images, #reset{
     display: flex;
     justify-content: center;
 }
@@ -13,6 +14,7 @@ body{
     cursor: pointer;        /* makes the cursor a hand when you are over it */
     font-size: 2rem;
     margin: 10px 20px;
+    transform: translate(27px);
     /* transition: 200ms;/*
 }
 
@@ -37,7 +39,7 @@ body{
     margin: 2px;
     font-size: 1rem;
     text-align: center;
-    color: #5a5959;
+    color: black;
 }
 
 .resultSelection{
@@ -49,12 +51,30 @@ body{
     margin: 10px 0px;
     opacity: 1;
     font-size: 1.5rem;
-    color: green;
+    color: rgb(233, 176, 246);
 }
 
 h1{
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: changa one;
-    color: white;
+}
+
+
+img{
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+}
+
+button{
+    color: pink;
+    font-family: changa one;
+    transition-duration: 0.4s;
+    border-radius: 4px;
+}
+
+button:hover{
+    background-color: pink;
+    color: #efefef
 }
