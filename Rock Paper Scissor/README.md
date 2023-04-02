@@ -23,4 +23,16 @@
 * Add a restart button to the game UI
 * When the restart button is clicked, resets the game score board and updates the UI
 
-## 1- DEFINE THE GAME DATA
+## 1- DEFINE THE GAME DATA IN HTML
+1. Create Three Buttons that user can use to choose their action
+``` html
+<button>ROCK</button>
+<button>Paper</button>
+<button>Scissor</button>
+```
+
+2.  Create a div that contains the score for the computer and player
+
+## 1- DEFINE THE GAME DATA IN HTML
+
+
