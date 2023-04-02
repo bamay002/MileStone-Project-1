@@ -65,3 +65,4 @@ function addSelectionResult(selection, winner){
 function incrementScore(scoreDiv){
     scoreDiv.innerText = parseInt(scoreDiv.innerText) + 1                 //FIX SCORE GIVES NAN INSTEAD OF NUM 20:51
 }
+
