@@ -1,7 +1,8 @@
 const selectionButtons = document.querySelectorAll('[data-selection]')
 const finalColumn = document.querySelector('[data-final-column]')
-const computerScoreSpan = document.querySelector('[data-computer-score]')
-const youScoreSpan = document.querySelector('[data-you-score]')
+const computerScoreDiv = document.querySelector('[data-computer-score]')
+const youScoreDiv = document.querySelector('[data-you-score]')
+
 const SELECTIONS = [
     {
         name: 'rock',
@@ -40,8 +41,8 @@ function makeSelection(selection){
     addSelectionResult(computerSelection, computerWinner)
     addSelectionResult(selection, youWinner)
 
-    if (youWinner) incrementScore(youScoreSpan)                 // THIS AND BELOW FIX SCORES 
-    if (computerWinner) incrementScore(computerScoreSpan)
+    if (youWinner) incrementScore(youScoreDiv)                 // THIS AND BELOW FIX SCORES 
+    if (computerWinner) incrementScore(computerScoreDiv)
 }                                               //everything above gets me to print out selection when inspect and look at console
 
 function randomSelection(){
@@ -61,6 +62,6 @@ function addSelectionResult(selection, winner){
     finalColumn.after(div)
 }
 
-function incrementScore(scoreSpan){
-    scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1                 //FIX SCORE GIVES NAN INSTEAD OF NUM 20:51
+function incrementScore(scoreDiv){
+    scoreDiv.innerText = parseInt(scoreDiv.innerText) + 1                 //FIX SCORE GIVES NAN INSTEAD OF NUM 20:51
 }
