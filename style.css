@@ -29,6 +29,7 @@ body{
     grid-template-columns: repeat(2,1fr);
     justify-items: center;
     align-items: center;
+    
 }
 
 .resultName{
@@ -77,4 +78,11 @@ button{
 button:hover{
     background-color: pink;
     color: #efefef
+}
+
+.resultIn{
+    text-align: center;
+    margin: 10px;
+    font-size: 1.5rem;
+    transform: translate(2px, 46px);
 }
