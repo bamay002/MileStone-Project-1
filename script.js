@@ -37,7 +37,6 @@ function makeSelection(selection){
     const computerSelection = randomSelection()
     const youWinner = isWinner(selection, computerSelection)
     const computerWinner = isWinner(computerSelection, selection)
-    console.log(computerSelection)
 
     addSelectionResult(computerSelection, computerWinner)
     addSelectionResult(selection, youWinner)
