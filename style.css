@@ -48,12 +48,6 @@ body{
     opacity: .5;
 }
 
-.resultSelectionWinner{
-    margin: 10px 0px;
-    opacity: 1;
-    font-size: 1.5rem;
-    color: rgb(233, 176, 246);
-}
 
 h1{
     text-align: center;
@@ -80,9 +74,14 @@ button:hover{
     color: #efefef
 }
 
-.resultIn{
+#resultIn{
     text-align: center;
     margin: 10px;
     font-size: 1.5rem;
     transform: translate(2px, 46px);
+}
+
+#youSelectionPrint , #computerSelectionPrint{
+    text-align: center;
+    margin-top: 15px;
 }

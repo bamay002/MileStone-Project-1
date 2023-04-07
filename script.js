@@ -2,10 +2,10 @@ const selectionButtons = document.querySelectorAll('[data-selection]')
 const finalColumn = document.querySelector('[data-final-column]')
 const computerScoreDiv = document.querySelector('[data-computer-score]')
 const youScoreDiv = document.querySelector('[data-you-score]')
-const resultIn = document.querySelector('.resultIn');
+const resultIn = document.getElementById("resultIn")
 
 
-const SELECTIONS = [
+const SELECTIONS = [                // all caps for global variable - array of constants of our options
     {
         name: 'rock',
         buttonName : 'ROCK',
@@ -25,10 +25,10 @@ const SELECTIONS = [
     }
 ]
 
-selectionButtons.forEach(selectionButton => {
-    selectionButton.addEventListener('click', e => {
-        const selectionName = selectionButton.dataset.selection
-        const selection = SELECTIONS.find(selection => selection.name === selectionName)
+selectionButtons.forEach(selectionButton => {                   //FOR EACH selectionButtons
+    selectionButton.addEventListener('click', e => {            //when you click
+        const selectionName = selectionButton.dataset.selection     // gets the name of what we click!
+        const selection = SELECTIONS.find(selection => selection.name === selectionName)        /// loops through SELECTIONS and finds what SELECTION === selectionName
         makeSelection(selection)
     })
 })
@@ -38,17 +38,27 @@ function makeSelection(selection){
     const youWinner = isWinner(selection, computerSelection)
     const computerWinner = isWinner(computerSelection, selection)
 
-    addSelectionResult(computerSelection, computerWinner)
-    addSelectionResult(selection, youWinner)
+    const youPrint = document.getElementById("youSelectionPrint")
+    youPrint.textContent = selection.buttonName
+    const compPrint = document.getElementById("computerSelectionPrint")
+    compPrint.textContent = computerSelection.buttonName 
+
+    youPrint.style.color = "pink";
+    compPrint.style.color = "pink";
+    youPrint.style.fontSize = "medium";
+    compPrint.style.fontSize = "medium";
 
     if (youWinner){
-
         incrementScore(youScoreDiv) 
         resultIn.textContent='You Win!'
+        youPrint.style.color = "rgb(233, 176, 246)";
+        youPrint.style.fontSize = "x-large";
     }              
     if (computerWinner){
         incrementScore(computerScoreDiv)
         resultIn.textContent = 'Computer Wins!'
+        compPrint.style.color = "rgb(233, 176, 246)"
+        compPrint.style.fontSize = "x-large"
     }
 
     if (computerWinner === youWinner){
@@ -63,18 +73,10 @@ function randomSelection(){
 
 function isWinner(selection, opponentSelection){
     return selection.beats === opponentSelection.name                   //from SELECTIONS above
-}
+}                                                                       //checking SELECTION if what is selected (clicked) is === to opponentSelection.beats then you are a winner
 
-function addSelectionResult(selection, winner){
-    const div = document.createElement('div')
-    div.innerText = selection.buttonName
-    div.classList.add('resultSelection')
-    if (winner) div.classList.add('resultSelectionWinner')
-    finalColumn.after(div)
-}
 
 function incrementScore(scoreDiv){
-    scoreDiv.innerText = parseInt(scoreDiv.innerText) + 1 
-    console.log("hi")                
+    scoreDiv.innerText = parseInt(scoreDiv.innerText) + 1                
 }
 
