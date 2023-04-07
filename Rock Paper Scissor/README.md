@@ -114,3 +114,13 @@ if (youWinner){
 
 
 
+
+
+
+
+
+**Sources**
+* got some ideas from youtube videos and webpages such as 
+* https://www.youtube.com/watch?v=1yS-JV4fWqY&t=1086s
+* https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/
+

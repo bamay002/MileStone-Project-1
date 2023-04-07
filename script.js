@@ -39,19 +39,19 @@ function makeSelection(selection){
     const computerWinner = isWinner(computerSelection, selection)
 
     const youPrint = document.getElementById("youSelectionPrint")
-    youPrint.textContent = selection.buttonName
+    youPrint.textContent = selection.buttonName                                 //cout what option was selected by comp / player
     const compPrint = document.getElementById("computerSelectionPrint")
     compPrint.textContent = computerSelection.buttonName 
 
     youPrint.style.color = "pink";
-    compPrint.style.color = "pink";
+    compPrint.style.color = "pink";                     //reverts styling
     youPrint.style.fontSize = "medium";
     compPrint.style.fontSize = "medium";
 
     if (youWinner){
         incrementScore(youScoreDiv) 
-        resultIn.textContent='You Win!'
-        youPrint.style.color = "rgb(233, 176, 246)";
+        resultIn.textContent='You Win!'                             //restultIn is a div i made in html to cout who the winner is
+        youPrint.style.color = "rgb(233, 176, 246)";                   //styling 
         youPrint.style.fontSize = "x-large";
     }              
     if (computerWinner){
