@@ -1,0 +1,77 @@
+body {
+  color: pink;
+  font-family: "changa one";
+}
+
+.selections, .images, #reset {
+  display: flex;
+  justify-content: center;
+}
+
+.selection {
+  cursor: pointer; /* makes the cursor a hand when you are over it */
+  font-size: 2rem;
+  margin: 10px 20px;
+  transform: translate(27px);
+  /* transition: 200ms;*/
+}
+.selection:hover {
+  transform: scale(1.2); /* when cursor goes over button - button grows just for illusion */
+}
+
+.result {
+  margin-top: 1rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.result .resultName {
+  font-size: 2rem;
+}
+.result .resultScore {
+  margin: 2px;
+  font-size: 2rem;
+  text-align: center;
+  color: black;
+}
+.result .resultSelection {
+  margin: 10px 0px;
+  opacity: 0.5;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: "changa one";
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+}
+
+button {
+  color: pink;
+  font-family: "changa one";
+  transition-duration: 0.4s;
+  border-radius: 4px;
+}
+button:hover {
+  background-color: pink;
+  color: #efefef;
+}
+
+#resultIn {
+  text-align: center;
+  margin: 10px;
+  font-size: 1.5rem;
+  transform: translate(2px, 46px);
+}
+
+#youSelectionPrint, #computerSelectionPrint {
+  text-align: center;
+  margin-top: 15px;
+}/*# sourceMappingURL=style.css.map */
